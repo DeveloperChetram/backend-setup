@@ -1,0 +1,84 @@
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+/dist
+
+# misc
+.DS_Store
+.env
+.env.*.local
+.env.local
+*.local
+.nyc_output
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+/logs
+*.log
+*.pid
+*.seed
+*.pid.lock
+
+# runtime data
+/pids
+/tsconfig.tsbuildinfo
+
+# editor directories and files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# OS files
+Thumbs.db
+ehthumbs.db
+*.swp
+*.swo
+
+# Mac system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# npm and yarn files
+package-lock.json
+yarn.lock
+
+# dotenv environment variables
+.env
+.env.*
+
+# debug
+debug.log
+*.tgz
+
+# next.js
+.next
+
+# vercel
+.vercel
+
+# parcel
+.cache
+
+# misc from various tools
+.eslintcache
+
+# typescript
+*.tsbuildinfo
+
+# firebase
+.firebase/
+
+# coverage directory used by tools like istanbul
+coverage
+.nyc_output
+

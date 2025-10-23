@@ -33,12 +33,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/backend-mvc-template.git"
+    "url": "https://github.com/DeveloperChetram/backend-setup"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/backend-mvc-template/issues"
+    "url": "https://github.com/DeveloperChetram/backend-setup/issues"
   },
-  "homepage": "https://github.com/yourusername/backend-mvc-template#readme",
+  "homepage": "https://github.com/DeveloperChetram/backend-setup#readme",
   "files": [
     "src/",
     "bin/",

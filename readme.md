@@ -1,82 +1,65 @@
 # Backend MVC Template
 
-[![npm version](https://badge.fury.io/js/backend-mvc-template.svg)](https://badge.fury.io/js/backend-mvc-template)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A complete backend API template following MVC architecture with Node.js, Express.js, MongoDB, and JWT authentication. Perfect for rapid backend development and learning MVC patterns.
 
 ## 🚀 Quick Start
 
-### Installation & Usage
+### Prerequisites
 
-```bash
-# Create a new backend project with npx (no installation needed!)
-npx create-mvc-backend-app my-awesome-backend
-```
+- Node.js (version 14.0.0 or higher)
+- MongoDB (local installation or MongoDB Atlas)
+- npm or yarn
 
-**What happens when you run the command:**
-```
-🚀 MVC Backend App Generator
-============================
-Project name: my-awesome-backend
+### Installation & Setup
 
-📁 Creating project: my-awesome-backend
-📂 Created directory: my-awesome-backend
-✅ Copied src
-✅ Copied server.js
-✅ Copied env.example
-✅ Copied README.md
-✅ Copied LICENSE
-✅ Created package.json
+1. **Clone or download this repository:**
+   ```bash
+   git clone <repository-url>
+   cd backend-setup
+   ```
 
-🎉 Project created successfully!
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-Next steps:
-1. cd my-awesome-backend
-2. npm install
-3. cp env.example .env
-4. Update .env with your MongoDB URI and JWT secret
-5. npm run dev
-
-Happy coding! 🚀
-```
-
-**Project Name Options:**
-- **Enter a name** (e.g., `my-backend`): Creates a new directory with that name
-- **Enter `.`**: Uses the current directory (like Vite)
-
-**Alternative Usage:**
-```bash
-# Run without project name (will prompt you)
-npx create-mvc-backend-app
-
-# Use current directory
-npx create-mvc-backend-app .
-```
-
-### Setup
-
-1. **Copy environment variables:**
+3. **Set up environment variables:**
    ```bash
    cp env.example .env
    ```
 
-2. **Update `.env` file with your configuration:**
+4. **Configure your `.env` file:**
    ```env
-   MONGODB_URI=mongodb://localhost:27017/your-database
-   JWT_SECRET=your-super-secret-jwt-key
+   # Database
+   MONGODB_URI=mongodb://localhost:27017/backend-template
+   # For MongoDB Atlas: mongodb+srv://username:password@cluster.mongodb.net/database-name
+   
+   # JWT Secret (generate a strong secret key)
+   JWT_SECRET=your-super-secret-jwt-key-change-this-in-production
+   
+   # Server Configuration
    PORT=5000
+   NODE_ENV=development
+   
+   # Frontend URL (for CORS)
    FRONTEND_URL=http://localhost:3000
+   
+   # Cookie Configuration
+   COOKIE_EXPIRES_IN=5d
    ```
 
-3. **Start the server:**
+5. **Start the server:**
    ```bash
-   # Development
+   # Development mode (with auto-restart)
    npm run dev
    
-   # Production
+   # Production mode
    npm start
    ```
+
+The server will start on `http://localhost:5000` (or your configured PORT).
 
 ## ✨ Features
 
@@ -92,34 +75,10 @@ npx create-mvc-backend-app .
 - ✅ **MongoDB Integration** - Mongoose ODM
 - ✅ **MVC Architecture** - Clean code organization
 
-## Project Structure
-
-```
-backend/
-├── src/
-│   ├── controllers/          # Request handlers
-│   │   └── auth.controllers.js
-│   ├── models/               # Database schemas
-│   │   └── user.model.js
-│   ├── routes/               # API route definitions
-│   │   └── auth.routes.js
-│   ├── middlewares/          # Cross-cutting concerns
-│   │   └── auth.middleware.js
-│   ├── db/                   # Database connection
-│   │   └── db.js
-│   ├── utils/                # Utility functions
-│   │   └── cookieOptions.js
-│   └── app.js                # Express app configuration
-├── server.js                 # Server entry point
-├── package.json
-├── env.example               # Environment variables template
-└── README.md
-```
-
 ## 📁 Project Structure
 
 ```
-backend-mvc-template/
+backend-setup/
 ├── src/
 │   ├── controllers/          # Request handlers
 │   │   └── auth.controllers.js
@@ -231,6 +190,7 @@ curl -X GET http://localhost:5000/api/auth/logout \
 | `PORT` | Server port | 5000 |
 | `NODE_ENV` | Environment mode | development |
 | `FRONTEND_URL` | Frontend URL for CORS | http://localhost:3000 |
+| `COOKIE_EXPIRES_IN` | Cookie expiration time | 5d |
 
 ## Dependencies
 
@@ -248,64 +208,18 @@ curl -X GET http://localhost:5000/api/auth/logout \
 # Install dependencies
 npm install
 
-# Start development server with nodemon
+# Start development server with nodemon (auto-restart on changes)
 npm run dev
 
 # Start production server
 npm start
 ```
 
-## 📦 Publishing to NPM
+### Available Scripts
 
-### Prerequisites
-
-1. **Create npm account**: Sign up at [npmjs.com](https://www.npmjs.com/)
-2. **Login to npm**: `npm login`
-3. **Update package.json**: Replace placeholder values with your actual information
-
-### Publishing Steps
-
-1. **Update package information in package.json:**
-   ```json
-   {
-     "name": "your-unique-package-name",
-     "author": "Your Name <your.email@example.com>",
-     "repository": {
-       "type": "git",
-       "url": "https://github.com/yourusername/your-repo.git"
-     },
-     "bugs": {
-       "url": "https://github.com/yourusername/your-repo/issues"
-     },
-     "homepage": "https://github.com/yourusername/your-repo#readme"
-   }
-   ```
-
-2. **Test your package:**
-   ```bash
-   npm pack
-   ```
-
-3. **Publish to npm:**
-   ```bash
-   npm publish
-   ```
-
-4. **Update version for future releases:**
-   ```bash
-   npm version patch  # for bug fixes
-   npm version minor  # for new features
-   npm version major  # for breaking changes
-   npm publish
-   ```
-
-### Package Information
-
-- **Package Name**: `backend-mvc-template` (change to your unique name)
-- **Version**: `1.0.0`
-- **License**: MIT
-- **Node Version**: >=14.0.0
-- **Main File**: `server.js`
+- `npm start` - Start the production server
+- `npm run dev` - Start development server with nodemon
+- `npm test` - Run tests (currently not implemented)
 
 ## 🤝 Contributing
 
@@ -326,5 +240,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - All contributors who help improve this template
 
 ---
+## 📨 Connect with me 🦄
+
+[![GitHub](https://img.shields.io/badge/GitHub-DeveloperChetram-black?style=flat-square&logo=github)](https://github.com/DeveloperChetram)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Chetram%20Patel-blue?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/developerchetram/)
+[![Visit Portfolio](https://img.shields.io/badge/Portfolio-chetram--portfolio.vercel.app-blueviolet?style=flat-square)](https://chetram-portfolio.vercel.app)
 
 **Made with ❤️ for the developer community**

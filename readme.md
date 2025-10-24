@@ -1,6 +1,6 @@
 # Backend MVC Template
 
-[![Version: 1.0.5-beta](https://img.shields.io/badge/version-1.0.5--beta-blue.svg)](#)
+[![Version: 1.0.6-beta](https://img.shields.io/badge/version-1.0.6--beta-blue.svg)](#)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A complete backend API template following MVC architecture with Node.js, Express.js, MongoDB, and JWT authentication. Perfect for rapid backend development and learning MVC patterns.

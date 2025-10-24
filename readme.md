@@ -21,6 +21,19 @@ Before you begin, ensure you have the following installed:
 # Create a new backend project with npx (no installation needed!)
 npx create-mvc-backend-app my-awesome-backend
 ```
+**Project Name Options:**
+- **Enter a name** (e.g., `my-backend`): Creates a new directory with that name
+- **Enter `.`**: Uses the current directory (like Vite)
+
+**Alternative Usage:**
+```bash
+# Run without project name (will prompt you)
+npx create-mvc-backend-app
+
+# Use current directory
+npx create-mvc-backend-app .
+```
+
 
 **What happens when you run the command:**
 ```
@@ -49,20 +62,8 @@ Next steps:
 Happy coding! 🚀
 ```
 
-**Project Name Options:**
-- **Enter a name** (e.g., `my-backend`): Creates a new directory with that name
-- **Enter `.`**: Uses the current directory (like Vite)
 
-**Alternative Usage:**
-```bash
-# Run without project name (will prompt you)
-npx create-mvc-backend-app
-
-# Use current directory
-npx create-mvc-backend-app .
-```
-
-### Method 2: Clone from GitHub
+### Method 2: Clone from GitHub (Without npm)
 
 ```bash
 # Clone the repository
@@ -185,7 +186,10 @@ backend-mvc-template/
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
+| GET | `/` | Server health check |
 | GET | `/api/health` | Server health check |
+
+
 
 ## API Response Format
 
@@ -309,7 +313,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 [![GitHub](https://img.shields.io/badge/GitHub-DeveloperChetram-black?style=flat-square&logo=github)](https://github.com/DeveloperChetram)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Chetram%20Patel-blue?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/developerchetram/)
+[![Portfolio](https://img.shields.io/badge/Portfolio-chetram--portfolio.vercel.app-blueviolet?style=flat-square)](https://chetram-portfolio.vercel.app)
 [![Instagram](https://img.shields.io/badge/Instagram-@developerchetram-pink?style=flat-square&logo=instagram)](https://instagram.com/developerchetram)
-[![Portfolio](https://img.shields.io/badge/Portfolio-chetram-portfolio.vercel.app-blueviolet?style=flat-square&logo=about-dot-me)](https://chetram-portfolio.vercel.app)
 
 *Made with ❤️ for the developer community*
